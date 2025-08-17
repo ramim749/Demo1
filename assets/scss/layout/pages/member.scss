@@ -1,0 +1,92 @@
+@use '../../utils' as* ;
+
+
+
+.ri_member{
+
+	&-area{
+		margin: 90px 0 100px 0;
+		position: relative;
+		.less-voor{
+			position: absolute;
+			right: 0;
+			top: -20px;
+			@media #{$md} {
+				right: inherit;
+				left: 0;
+				top: -60px;
+			}
+		}
+		.title{
+			margin-bottom: 44px;
+			text-align: center;
+			& span{
+				color: #6F6F6F;
+				font-family: $Sans;
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 100%;
+				letter-spacing: 2%;
+				text-align: center;
+
+			}
+		}
+		.member01{
+			.swiper-wrapper{
+				-webkit-transition-timing-function: linear;
+				transition-timing-function: linear;
+				.swiper-slide{
+					width: auto;
+					display: inline-block;
+
+					.member-logo{
+							border: 1px solid #C2C2C2;
+							height: 110px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							border-radius: 6px;
+							padding: 10px;
+							width: 160px;
+							& img{
+								max-width: 100%;
+								max-height: 100%;
+								object-fit: contain;
+							}
+					}
+
+				}
+			}
+		}
+		.member-btn{
+				margin-top: 68px;
+				text-align: center;
+				width: 100%;
+
+			& a{
+				background-color: var(--pri-clr);
+				font-family: $Sans;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 100%;
+				letter-spacing: 7%;
+				text-align: center;
+				text-transform: uppercase;
+				padding: 18px 30px;
+				border-radius: 50px;
+				color: #FFFFFF;
+				text-decoration: none;
+				transition: all 0.3s;
+				&:hover{
+					background-color: #FFFFFF;
+					color: var(--pri-clr);
+					border: 1px solid var(--pri-clr);
+				}
+
+				
+			}
+
+		}
+	}
+}
+

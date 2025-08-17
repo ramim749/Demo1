@@ -1,0 +1,91 @@
+@use '../../utils' as*;
+
+
+
+.ri_footer{
+    background-color: var(--sec-clr);
+    &-top{
+        padding: 60px 0 90px 0;
+        .content-area{
+            justify-content: space-between;
+        }
+        .content{
+            margin-bottom: 34px;
+            & h3{
+                font-family: $Sans;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 7%;
+                text-transform: uppercase;
+                color: var(--white-clr);
+                margin-bottom: 28px;
+            }
+            & p{
+                margin: 0;
+                font-family: $Sans;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: 0%;
+                color: #C2C2C2;
+                margin-bottom: 10px;
+
+            }
+            &.content3{
+                margin-top: 56px;
+                & a{
+                    display: block;
+                    font-family: $Sans;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 35px;
+                    letter-spacing: 0%;
+                    color: #C2C2C2;
+                    text-decoration: none;
+                }
+            }
+           
+        }
+         .social{
+            display: flex;
+                & a{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    width: 32px;
+                    height: 32px;
+                    background-color: #3B5998;
+                    text-decoration: none;
+                    & i{
+                        font-size: 14px;
+                        color: var(--white-clr);
+                    }
+                    &:nth-last-child(2){
+                        background-color: #515BD4;
+                        margin: 0 5px;
+                    }
+                    &:nth-last-child(1){
+                        background-color: #007BB6;
+                    }
+                }
+            }
+    }
+    &-bottom{
+        padding: 17px 0;
+        background-color: var(--pri-clr);
+        text-align: center;
+        .text{
+            & p{
+                font-family: $Sans;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0%;
+                color: var(--white-clr);
+                margin: 0;
+            }
+        }
+    }
+}

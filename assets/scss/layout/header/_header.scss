@@ -1,0 +1,538 @@
+@use '../../utils' as*;
+
+.ri_header{
+    &-top{
+        background-color: #F5F5F5;
+        &-area{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            .right{
+                display: flex;
+                & span{
+                    font-family: $Sans;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    color: #6F6F6F;
+                    display: block;
+                    margin-right: 14px;
+                    text-transform: capitalize;
+                    transform: translateY(3px);
+                }
+                & img{
+                    border-radius: 100%;
+                    width: 23px;
+                    height: 23px;
+                    &:nth-last-child(2){
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+    &-middle{
+        position: relative;
+        overflow: hidden;
+        overflow-y: scroll;
+        &-area{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 120px;
+            z-index: 999;
+            position: relative;
+
+            .logo{
+                height: 102px;
+                width: 352px;
+                @media #{$md} {
+                    width: 230px;
+                    height: auto;
+                }
+                @media #{$sm} {
+                    width: 160px;
+                    height: auto;
+                }
+
+            }
+            .social{
+                display: flex;
+                @media #{$md} {
+                    display: none;
+                }
+                & a{
+                    display: flex;
+                    width: 32px;
+                    height: 32px;
+                    background-color: var(--pri-clr);
+                    border-radius: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    & i{
+                        color: #FFFFFF;
+                        font-size: 14px;
+    
+                    }
+                    &:nth-last-child(2){
+                        margin: 0 5px;
+                    }
+                    
+                }
+            }
+            .search{
+                width: 385px;
+                height: 50px;
+                position: relative;
+                @media #{$md} {
+                    display: none;
+                   
+                }
+                 &.search2{
+                         @media #{$md} {
+                        display: block;
+                   
+                         }
+                    }
+                & input{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50px;
+                    border: 1px solid #C2C2C2;
+                    background-color: #F2F2F2;
+                    padding-left: 26px;
+                    &::placeholder{
+                            font-family: $Sans;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 100%;
+                            letter-spacing: 0%;
+                            color: #6F6F6F;
+
+                    }
+                }
+                .search-btn{
+                    position: absolute;
+                    right: 6px;
+                    top: 5px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    background-color: var(--pri-clr);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    & i{
+                        font-size: 14px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+           .mobile-menu{
+            display: none;
+
+            @media #{$md} {
+                display: block;
+            }
+
+             .menu-area{
+                display: flex;
+                gap: 4px;
+                .mobile-search{
+                    position: relative;
+                    .search-area{
+                        display: none;
+                        position: absolute;
+                        transition: all 0.5s ;
+                        right: 100%;
+                        top: 3px;
+
+                    }
+                    .search-area-toogle{
+                          display: block;
+                        & input{
+                            background: var(--white-clr);
+                            padding: 5px 10px;
+                            margin-right: 10px;
+                            border-radius: 50px;
+                            outline: 0;
+                            transition: all 0.5s ;
+                            transform: scale(1);
+                            border: 1px solid rgb(224, 224, 224);
+
+
+                        }
+                    }
+                   
+                }
+                & button{
+                    width: 40px;
+                    height: 40px;
+                    background-color: var(--pri-clr);
+                    border: none;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    & i{
+                        font-size: 16px;
+                        color: var(--white-clr);
+                    }
+                    &.nav-bar{
+                        & img{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                
+            }
+           }
+
+
+        }
+
+       
+    }
+    
+    &-bottom{
+        background-color: #C9E5FD;
+        @media #{$md} {
+                    display: none;
+                }
+        &-area{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .menu{
+                
+                & ul{
+                    padding: 0;
+                    display: flex;
+                    height: 60px;
+                    align-items: center;
+                    gap: 24px;
+                    margin: 0;
+                     @media #{$lg} {
+                        gap: 24px;
+                    }
+                    & li{
+                        list-style: none;
+                        & a{
+                            font-family: $Sans;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 100%;
+                            letter-spacing: 4%;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            color: #000000;
+                            padding: 21px 16px;
+                            transition: all 0.3s ease;
+                             @media #{$lg} {
+                                font-size: 14px;
+                                gap: 0;
+                                    }
+                            & i{
+                                transition: all 0.3s;
+                            }
+                            &:hover{
+                                background-color: #FFFFFF;
+                                & i{
+                                    transform: rotate(-180deg);
+                                }
+                            }
+
+                        }
+                        &.dropdown{
+                         position: relative;
+                        .mega-menu{
+                        background-color: var(--white-clr);
+                        padding: 40px 0 80px 0;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        z-index: 999;
+                        & li{
+                            margin-bottom: 10px;
+                            & a{
+                                text-decoration: none;
+                                color: #000000;
+                                font-size: 14px;
+                                line-height: 1.2;
+                                text-transform: capitalize;
+                            }
+                        }
+                        .less-voor{
+                            margin-right: 20px;
+                            text-align: end;
+                            margin-bottom: 30px;
+                        }
+                        &-area{
+                            display: flex;
+                            justify-content: space-between;
+                            
+                            .left{
+                                margin-left: 40px;
+                                & span{
+                                    display: block;
+                                    color: #6F6F6F;
+                                    font-size: 16px;
+                                    line-height: 1.2;
+                                    text-transform: uppercase;
+                                    font-weight: 600;
+                                    margin-bottom: 20px;
+
+                                }
+
+                                & ul{
+                                    padding: 0;
+                                    & li{
+                                        list-style: none;
+                                        display: flex;
+                                    
+                                        .btn01{
+                                            background: none;
+                                            width: 25px;
+                                            height: 25px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border: none;
+                                            border-radius: 3px;
+                                            transform: translateY(-3px);
+                                            margin-left: 20px;
+                                            transition: all 0.3s ease;
+                                            & i{
+                                            font-size: 14px;
+                                            color: #979797;
+                                            transition: all 0.3s ease;
+                                            }
+                                            &:hover{
+                                            background-color: #cecdcd;
+                                                & i{
+                                                    transform: rotate(90deg);
+                                                }
+                                            }
+                                        }
+                                        .btn001{
+                                            background: none;
+                                            width: 25px;
+                                            height: 25px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border: none;
+                                            border-radius: 3px;
+                                            transform: translateY(-3px);
+                                            margin-left: 20px;
+                                            transition: all 0.3s ease;
+                                            & i{
+                                            font-size: 14px;
+                                            color: #979797;
+                                            transition: all 0.3s ease;
+                                            }
+                                            &:hover{
+                                            background-color: #cecdcd;
+                                                & i{
+                                                    transform: rotate(90deg);
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                                .submenu2{
+                                    margin-left: 20px;
+                                    margin-bottom: 30px;
+                                    width: 100%;
+                                    height: auto;
+                                    display: none;
+                                    transition: all 0.3s ease-in-out;
+                                    &-toogle{
+                                        display: block;
+                                        .btn01{
+                                            background-color: #F2F2F2;
+                                        }
+                                    }
+                                    .btn03{
+                                            background: none;
+                                            width: 25px;
+                                            height: 25px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border: none;
+                                            border-radius: 3px;
+                                            transform: translateY(-3px);
+                                            margin-left: 20px;
+                                            transition: all 0.3s ease;
+                                            & i{
+                                            font-size: 14px;
+                                            color: #979797;
+                                            transition: all 0.3s ease;
+                                                
+                                            }
+                                            &:hover{
+                                            background-color: #cecdcd;
+                                                & i{
+                                                    transform: rotate(90deg);
+                                                }
+                                            }
+                                        
+                                    
+                                        }
+                                        .submenu3{
+                                                display: none;
+                                                margin-left: 20px;
+                                                margin-bottom: 30px;
+                                                &-toogle{
+                                                    display: block;
+                                                }
+                                            }
+                                }
+                                .submenu4{
+                                    margin-left: 20px;
+                                    display: none;
+                                    &-toogle{
+                                        display: block;
+                                    }
+                                }
+                            }
+
+                            .right{
+                                margin-right: 20px;
+                                display: block;
+                                background-color: rgb(2, 214, 252);
+                                padding: 24px 40px 30px 24px;
+                                border-radius: 6px;
+                                height: auto;
+                                & span{
+                                    font-size: 16px;
+                                    color: #000000;
+                                    font-weight: 600;
+                                    text-transform: uppercase;
+                                    display: block;
+                                    margin-bottom: 20px;
+                                }
+                                & nav{
+                                    display: flex;
+                                    gap: 30px;
+                                    & ul{
+                                        padding: 0;
+                                        margin: 0;
+                                        & li {
+                                            list-style: none;
+                                            & a{
+                                                text-decoration: none;
+                                                color: #000000;
+                                                font-size: 14px;
+                                                line-height: 1.2;
+                                                text-transform: capitalize;
+                                                transition: all ease-in-out 0.3s;
+                                                &:hover{
+                                                    margin-left: 10px;
+                                                    
+                                                }
+                                                & img{
+                                                    margin-right: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                     }
+                    }
+                   
+                }
+            }
+            .contact-btn{
+                & a{
+                    background-color: var(--pri-clr);
+                    padding: 18px 32px;
+                    text-decoration: none;
+                    font-family: Open $Sans;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 100%;
+                    letter-spacing: 7%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    @media #{$lg} {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+
+        
+    }
+    .toogle-menu{
+        background-color: rgba(115, 203, 241, 0.532);
+       .accordion{
+            background: transparent;
+
+         .accordion-item{
+            background: transparent;
+            border: none;
+
+            .accordion-body{
+             background: transparent;
+             padding: 0;
+                & ul {
+                    padding: 0;
+                    padding: 20px 0 20px 0;
+
+                    & li{
+                        list-style: none;
+                        padding: 0;
+                        & a{
+                            display: block;
+                            padding: 21px 16px;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            font-size: 14px;
+                            font-family: $Sans;
+                            color: black;
+                            transition: all 0.3s;
+                            &:hover{
+                                background-color: var(--white-clr);
+                            }
+                        }
+                    }
+                }
+                .contact-btn{
+                    padding-bottom: 50px;
+                    margin-left: 16px;
+                    & a{
+
+                        background-color: var(--pri-clr);
+                        padding-block: 16px;
+                        padding-inline: 16px;
+                        font-size: 16px;
+                        font-family: $Sans;
+                        color: var(--white-clr);
+                        transition: all 0.3;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        &:hover{
+                            background-color: var(--sec-clr);
+                        }
+                    }
+                }
+                }
+         }
+       }
+    }
+    
+}
+

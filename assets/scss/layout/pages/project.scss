@@ -1,0 +1,91 @@
+@use '../../utils' as * ;
+
+
+
+.ri_project{
+    background-color: var(--sec-clr);
+    &-area{
+        padding: 160px 0;
+        position: relative;
+        @media #{$md} {
+            padding: 80px 0 40px 0;
+        }
+        .less-voor{
+            position: absolute;
+            right: 0;
+            top: 72px;
+            @media #{$md} {
+            right: inherit;
+            left: 0;
+            top: 24px;
+            }
+        }
+        .title{
+            font-family: $Sans;
+            font-weight: 700;
+            font-size: 69px;
+            line-height: 1.33;
+            letter-spacing: 0%;
+            color: var(--white-clr);
+            @media #{$lg} {
+                font-size: 50px;
+                line-height: 1.33 ;
+            }
+            @media #{$md} {
+                font-size: 40px;
+                line-height: 1.33 ;
+            }
+            @media #{$sm} {
+                font-size: 30px;
+                line-height: 1.33 ;
+            }
+        }
+        .content{
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            @media #{$md} {
+                display: block;
+                margin-top: 20px;
+            }
+            & p{
+                width: 530px;
+                font-family: $Sans;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: 0%;
+                color: var(--white-clr);
+                margin-bottom: 0;
+                  @media #{$md} {
+                        margin-bottom: 40px;    
+                    }
+                  @media #{$sm} {
+                        width: 100%;
+                    }
+               
+            }
+             .contact-btn{
+                    font-family: $Sans;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 100%;
+                    letter-spacing: 7%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: var(--pri-clr);
+                    background-color: var(--white-clr);
+                    padding: 18px 30px;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    box-shadow:0 6px 10px 0 #FFFFFF40 ;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        background-color: var(--pri-clr);
+                        color: var(--white-clr);
+                    }
+                    
+                }
+        }
+    }
+}

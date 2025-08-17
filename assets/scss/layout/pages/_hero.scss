@@ -1,0 +1,167 @@
+@use '../../utils' as *;
+
+.ri_hero{
+    width: 100%;
+    margin-bottom: 0;
+    &.slick-dotted.slick-slider{
+        margin-bottom: 0;
+    }
+  
+    & button{
+        display: none;
+    }
+    .slick-arrow{
+        display: none;
+    }
+    .arrow-right{
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+            position: absolute;
+            right: 38px;
+            top: 303px;
+            z-index: 999;
+            border: 1px solid var(--white-clr);
+            background-color: rgba(255, 255, 255, 0.1490196078);
+            color: var(--white-clr);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media #{$md} {
+                display: none;
+            }
+
+    }
+    .arrow-left{
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+            position: absolute;
+            left: 38px;
+            top: 303px;
+            border: 1px solid var(--white-clr);
+            background-color: rgba(255, 255, 255, 0.1490196078);
+            color: var(--white-clr);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media #{$md} {
+                display: none;
+            }
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: 195px;
+        @media #{$md} {
+            bottom: 100px;
+        }
+        & li {
+            & button{
+                background-color: #ADADAD;
+                border-radius: 100%;
+               width: 18px;
+               height: 18px;
+               @media #{$md} {
+                width: 16px;
+                height: 16px;
+               }
+               &::before{
+                display: none;
+               }
+
+            }
+             &.slick-active{
+                & button{
+                    background-color: var(--white-clr);
+
+                }
+                }
+        }
+    }
+    &-area{
+        width: 100%;
+        height: 833px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 9;
+         @media #{$lg} {
+                 height: 800px;
+            }
+         @media #{$md} {
+                 height: 430px;
+            }
+         @media #{$sm} {
+                 height: 400px;
+            }
+         @media #{$xs} {
+                 height: 445px;
+            }
+        &-content{
+            padding-top: 200px;
+            padding-bottom: 340px;
+            @media #{$md} {
+                 padding-top: 77pxpx;
+                 padding-bottom: 172px;
+            }
+            .text{
+                & h1{
+                    font-family: $Sans;
+                    font-weight: 700;
+                    font-size: 64px;
+                    line-height: 76px;
+                    letter-spacing: 2%;
+                    text-align: center;
+                    color: #ffffff;
+                    @media #{$lg} {
+                        font-size: 55px;
+                    }
+                    @media #{$md} {
+                        font-size: 42px;
+                        line-height: 1.2;
+                    }
+                    @media #{$sm} {
+                        font-size: 33px;
+                        line-height: 1.2;
+                        padding: 0 80px;
+                    }
+                    @media #{$xs} {
+                        font-size: 33px;
+                        line-height: 1.2;
+                        padding: 0 20px;
+                    }
+
+                }
+                .learn-btn{
+                    margin-top: 75px;
+                    @media #{$md} {
+                        margin-top: 40px;
+                    }
+                    & a{
+                        font-family: $Sans;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 100%;
+                        letter-spacing: 7%;
+                        text-align: center;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: var(--pri-clr);
+                        padding: 18px 44px;
+                        border-radius: 50px;
+                        background-color: var(--white-clr);
+                        transition: all  0.3s ease;
+                         @media #{$md} {
+                        padding: 16px 44px;
+                            }
+                        &:hover{
+                            background-color: var(--pri-clr);
+                            color: var(--white-clr);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
